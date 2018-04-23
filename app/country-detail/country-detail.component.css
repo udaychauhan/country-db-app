@@ -1,0 +1,51 @@
+:root{
+    font-size: 16px;
+    width: 10vw;
+    height:20px;
+}
+
+body{
+    margin:0;
+    padding:0;
+}
+
+.home-body{
+    /* background: url("https://i.imgur.com/UwG42IY.jpg") no-repeat center center fixed;  */
+    padding:2%;
+    background-size: cover;
+}
+
+.heading-text{
+    font-family: 'Arvo', serif;
+    font-size: 3rem;
+    text-decoration: underline;
+    background:rgba(87, 86, 84, 0.509);
+    font-weight:bold;
+    color: black;
+    padding: 2%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.content-text{
+    font-family: 'Lato', sans-serif;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space:normal;
+    background:rgba(87, 86, 84, 0.509);
+    color: black;
+    padding: 2%;
+    font-size: 2rem;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.info-container{
+    display:flex;
+    flex-direction: column;
+    border-style: solid;
+    margin : 2px;
+    border-width: 1px;
+    align-content: space-between;
+    
+}
+

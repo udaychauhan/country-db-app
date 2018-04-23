@@ -1,0 +1,39 @@
+<link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+<div class="container-fluid home-body" style="text-align:center">
+
+  <div>
+    <button (click)="goBackToPreviousPage()" class=" btn btn-danger">Go Back.</button>
+  </div>
+  <br>
+  <div>
+    <p class="content-text">Filtered By : {{filteredBy | uppercase}}</p>
+    <br>
+  </div>
+
+ 
+
+  <!-- Countries -->
+  <div class="booksContainer">
+    <div class="row scrollGroup" style="text-align:center" *ngIf="countriesArray.length > 0">
+
+      <div *ngFor="let country of countriesArray" class="scrollCol">
+
+        <div class="card bookCard">
+          <!--style="width:20rem; height:20rem;"-->
+          <div class="card-body" style="height:100%;width: 100%" [style.background-image]="getSanitisedImage(country)">
+            <h5 class="card-title heading-text">{{country.name | uppercase}}</h5>
+            <p class="content-text">Capital : {{country.capital | uppercase}}</p>
+            <p class="content-text">Population : {{country.population}}</p>
+            <p class="content-text">Region : {{country.region | uppercase}}</p>
+            <button (click)="goToCountryDetailComponent(country.name)" class="cardButton btn btn-primary">Read About Me.</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>

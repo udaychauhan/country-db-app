@@ -1,0 +1,30 @@
+<link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+<div class="container-fluid home-body" [style.background-image]="countryDetail.sanitisedImage" style="text-align:center" *ngIf="countryDetail != null">
+  <div class="booksContainer" >
+
+    <div class="row" style="text-align:center">
+      <div class="col-md-12 heading-text">Country Information </div>
+    </div>
+
+    <br>
+
+    <div class="row info-container">
+        <p class="content-text">Name : {{countryDetail.name | uppercase}}</p>
+        <p class="content-text">Capital : {{countryDetail.capital | uppercase}}</p>
+        <p class="content-text">Population : {{countryDetail.population}}</p>
+        <p class="content-text">Region : {{countryDetail.region | uppercase}}</p>
+        <p class="content-text">Sub-Region : {{countryDetail.subregion | uppercase}}</p>
+        <button class=" btn content-text" (click)="goToCountryListComponentByCurrency(countryDetail.currencyCode)">
+          Currency : {{countryDetail.currency | uppercase}}  (Click to View)</button>
+          <br>
+        <button class=" btn content-text" (click)="goToCountryListComponentByLang(countryDetail.langCode)" >
+Language : {{countryDetail.languages | uppercase}}   (Click to View)</button>
+             
+    </div>
+
+  </div>
+
+
+</div>

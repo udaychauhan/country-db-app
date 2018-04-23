@@ -1,0 +1,23 @@
+<link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+<div class="container-fluid home-body" style="text-align:center">
+
+  <!-- BOOKS -->
+  <div class="booksContainer">
+  
+    <div class="row regionGroup" style="text-align:center" *ngIf="_regionObject.length > 0">
+      <div *ngFor="let region of _regionObject" >
+        
+        <div class="card bookCard" style="width:25rem; height:25rem;">
+          <div class="card-body" style="height:100%;width: 100%" [style.background-image]="getSanitisedImage(region.img)" >
+            <h5 class="card-title heading-text">{{region.name | uppercase}}</h5>
+            <button (click)="goToCountriesViewComponent(region.name)" class="cardButton btn btn-primary">Explore Me!</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
